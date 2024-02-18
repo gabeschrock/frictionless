@@ -5,8 +5,8 @@
 
 [node name="Main" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("1_3gmit")]
-position = Vector2(576, 320)
-gravity_scale = 2.0
-
 [node name="DemoLevel" parent="." instance=ExtResource("2_bl28l")]
+
+[node name="Player" parent="." instance=ExtResource("1_3gmit")]
+position = Vector2(408, 335)
+gravity_scale = 2.0
