@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn2e2l0dvlgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acaq6"]
+size = Vector2(1152, 50)
+
+[node name="GroundTest" type="RigidBody2D"]
+position = Vector2(576, 623)
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_acaq6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -576.0
+offset_top = -25.0
+offset_right = 576.0
+offset_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+color = Color(0, 0.815686, 0.376471, 1)
