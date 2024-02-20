@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckum5b7fp8frx"]
+[gd_scene load_steps=4 format=3 uid="uid://ckum5b7fp8frx"]
 
 [ext_resource type="PackedScene" uid="uid://bryrwpbxmg7mf" path="res://player.tscn" id="1_3gmit"]
 [ext_resource type="PackedScene" uid="uid://bcn2e2l0dvlgi" path="res://demo_level.tscn" id="2_bl28l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prsln"]
+size = Vector2(40, 40)
 
 [node name="Main" type="Node"]
 
@@ -10,3 +13,21 @@
 [node name="Player" parent="." instance=ExtResource("1_3gmit")]
 position = Vector2(408, 335)
 gravity_scale = 2.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(243, 303)
+collision_layer = 4
+collision_mask = 3
+gravity_scale = 2.0
+can_sleep = false
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_prsln")
+
+[node name="ColorRect" type="ColorRect" parent="RigidBody2D"]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+metadata/_edit_use_anchors_ = true
