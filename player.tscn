@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d0pdwqfrujekl" path="res://assets/Player placeholder.png" id="2_33qst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n820v"]
-size = Vector2(48, 60)
+size = Vector2(48, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3g75i"]
 animations = [{
@@ -24,24 +24,10 @@ lock_rotation = true
 script = ExtResource("1_wk7f4")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+scale = Vector2(0.9, 0.9)
 shape = SubResource("RectangleShape2D_n820v")
 
-[node name="Animations" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_3g75i")
 animation = &"placeholder"
-
-[node name="GroundRayCast1" type="RayCast2D" parent="."]
-position = Vector2(-24, 0)
-target_position = Vector2(0, 36)
-collision_mask = 2
-
-[node name="GroundRayCast2" type="RayCast2D" parent="."]
-target_position = Vector2(0, 36)
-collision_mask = 2
-
-[node name="GroundRayCast3" type="RayCast2D" parent="."]
-position = Vector2(24, 0)
-target_position = Vector2(0, 36)
-collision_mask = 2
