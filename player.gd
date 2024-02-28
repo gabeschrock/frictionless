@@ -21,3 +21,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_left"):
 		linear_velocity.x -= 400 * delta
 	
+	#var tile_index = danger_tilemap.local_to_map(position)
+	#if danger_tilemap.get_cell_tile_data(0, tile_index):
+		#print("hit danger")
+
+
+func _on_danger_hitbox_body_entered(_body):
+	print("hit")

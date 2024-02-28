@@ -19,7 +19,6 @@ animations = [{
 
 [node name="Player" type="RigidBody2D"]
 collision_mask = 2
-can_sleep = false
 lock_rotation = true
 script = ExtResource("1_wk7f4")
 
@@ -31,3 +30,5 @@ shape = SubResource("RectangleShape2D_n820v")
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_3g75i")
 animation = &"placeholder"
+
+[node name="Camera2D" type="Camera2D" parent="."]
