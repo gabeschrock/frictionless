@@ -16,7 +16,8 @@ func _physics_process(delta: float):
 	
 	if coords == door_coords:
 		print("Exit door reached")
-		_on_danger_hitbox_body_entered(self) # hack to restart level, temporary
+		get_parent().get_parent().load_level(1)
+		get_parent().queue_free()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -41,4 +42,3 @@ func _on_danger_hitbox_body_entered(body: Node2D):
 	if body == self:
 		get_parent().get_parent().load_level(1)
 		get_parent().queue_free()
-		
