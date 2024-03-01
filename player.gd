@@ -26,3 +26,10 @@ func _physics_process(delta):
 		velocity.x += move_toward(velocity.x, 0, SPEED) * delta
 
 	move_and_slide()
+
+
+func _on_danger_hitbox_body_entered(body):
+	if body == self:
+		get_parent().get_parent().load_level(1)
+		get_parent().queue_free()
+		
