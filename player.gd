@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var tilemap: TileMap
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -7,8 +8,16 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var door_coords = Vector2i(0, 4)
 
-func _physics_process(delta):
+func _physics_process(delta: float):
+	var tilePos = tilemap.local_to_map(position)
+	var coords = tilemap.get_cell_atlas_coords(0, tilePos)
+	
+	if coords == door_coords:
+		print("Exit door reached")
+		_on_danger_hitbox_body_entered(self) # hack to restart level, temporary
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -28,7 +37,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_danger_hitbox_body_entered(body):
+func _on_danger_hitbox_body_entered(body: Node2D):
 	if body == self:
 		get_parent().get_parent().load_level(1)
 		get_parent().queue_free()
