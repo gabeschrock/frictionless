@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cjbblmcq23wl2"]
+
+[node name="SpikeHitbox" type="CollisionPolygon2D"]
+polygon = PackedVector2Array(0, 64, 32, 8, 64, 64)
