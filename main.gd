@@ -1,8 +1,12 @@
 extends Node
 
+@export var main_menu = preload("res://menus/main_menu.tscn")
+@export var level_select = preload("res://menus/level_select.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	var instance = main_menu.instantiate()
+	add_child(instance)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
