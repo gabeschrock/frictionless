@@ -1,17 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7b72b4uqmu41"]
+[gd_scene load_steps=3 format=3 uid="uid://b7b72b4uqmu41"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_7j25h"]
+[ext_resource type="Script" path="res://menus/main_menu.gd" id="1_1yd11"]
+[ext_resource type="Theme" uid="uid://qkfcmq8oqw2k" path="res://resources/menu_theme.tres" id="2_643i8"]
 
 [node name="MainMenu" type="CanvasLayer"]
-script = ExtResource("1_7j25h")
-
-[node name="Background" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.501961, 0.501961, 0.501961, 1)
+script = ExtResource("1_1yd11")
 
 [node name="Title" type="Label" parent="."]
 anchors_preset = 8
@@ -25,6 +18,7 @@ offset_right = 219.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme = ExtResource("2_643i8")
 theme_override_font_sizes/font_size = 80
 text = "Frictionless"
 
@@ -39,7 +33,7 @@ offset_right = 99.0
 offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme = ExtResource("2_643i8")
 text = "Play
 "
 

@@ -1,16 +1,18 @@
 extends CanvasLayer
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
 
-
-func _on_play_button_pressed():
-	get_parent().load_level(1)
-	
+func open_level(level: int):
+	get_parent().load_level(level)
 	self.queue_free()
+
+func _on_level_1_pressed():
+	open_level(1)

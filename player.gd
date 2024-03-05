@@ -13,7 +13,7 @@ var door_atlas_coords = Vector2i(0, 2)
 
 func _physics_process(delta: float):
 	var tilePos = tilemap.local_to_map(position)
-	var coords = tilemap.get_cell_atlas_coords(0, tilePos)
+	var coords = tilemap.get_cell_atlas_coords(0, tilePos / 4)
 	
 	if coords == door_atlas_coords:
 		current_level += 1
