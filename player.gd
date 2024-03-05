@@ -40,12 +40,16 @@ func _physics_process(delta: float):
 	# Get input direction and handle the acceleration.
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
-		$AnimatedSprite2D.play("walk")
 		velocity.x += direction * SPEED * delta
 	else:
-		$AnimatedSprite2D.play("idle")
 		velocity.x += move_toward(velocity.x, 0, SPEED) * delta
-
+	
+	if velocity.x:
+		$AnimatedSprite2D.play("walk")
+		$AnimatedSprite2D.scale.x = sign(velocity.x) * 4
+	else:
+		$AnimatedSprite2D.play("idle")
+	
 	move_and_slide()
 
 
