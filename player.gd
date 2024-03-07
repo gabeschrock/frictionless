@@ -16,12 +16,6 @@ var zone_all_atlas_coords = Vector2i(-1, -1)
 var zone_up_atlas_coords = Vector2i(0, 5)
 
 func _physics_process(delta: float):
-	# Check if exiting to level select, placed first to remove unnessecary processing
-	if Input.is_action_just_pressed("exit"):
-		var instance = main_node.level_select.instantiate()
-		main_node.add_child(instance)
-		get_parent().queue_free()
-	
 	# Get tilemap coordinates
 	var tilePos = tilemap.local_to_map(position) / 4
 	
@@ -41,15 +35,14 @@ func _physics_process(delta: float):
 	# Check if touching door
 	if blocks_coords == door_atlas_coords:
 		current_level += 1
-		get_parent().get_parent().load_level(current_level)
-		get_parent().queue_free()
+		load_level()
 	
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
 	# Handle jump
-	if move_up and Input.is_action_just_pressed("jump") and is_on_floor():
+	if move_up and Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get input direction and handle the acceleration.
@@ -73,9 +66,27 @@ func _physics_process(delta: float):
 	
 	move_and_slide()
 
+func _input(event: InputEvent):
+	# Only handling keyboard events
+	if not event is InputEventKey:
+		return
+	
+	# Check to restart level
+	if event.is_action_pressed("restart"):
+		load_level()
+	
+	# Check to exit to level select
+	if event.is_action_pressed("exit"):
+		var instance = main_node.level_select.instantiate()
+		
+		main_node.add_child(instance)
+		get_parent().queue_free()
 
 func _on_danger_hitbox_body_entered(body: Node2D):
 	if body != self:
 		return
+	load_level()
+
+func load_level():
 	main_node.load_level(current_level)
 	get_parent().queue_free()

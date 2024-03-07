@@ -10,7 +10,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(_delta: float):
 	pass
 
 # Load a level and add it as a child. 'level' is an integer 1 or more.
