@@ -12,6 +12,8 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var door_atlas_coords = Vector2i(0, 2)
+var zone_all_atlas_coords = Vector2i(-1, -1)
+var zone_up_atlas_coords = Vector2i(0, 5)
 
 func _physics_process(delta: float):
 	# Check if exiting to level select, placed first to remove unnessecary processing
@@ -20,11 +22,24 @@ func _physics_process(delta: float):
 		main_node.add_child(instance)
 		get_parent().queue_free()
 	
-	# Check if touching door tile
-	var tilePos = tilemap.local_to_map(position)
-	var coords = tilemap.get_cell_atlas_coords(0, tilePos / 4)
+	# Get tilemap coordinates
+	var tilePos = tilemap.local_to_map(position) / 4
 	
-	if coords == door_atlas_coords:
+	var blocks_coords = tilemap.get_cell_atlas_coords(0, tilePos)
+	var zone_coords = tilemap.get_cell_atlas_coords(3, tilePos)
+	
+	var move_side = true
+	var move_up = true
+	
+	# Check zone
+	if zone_coords == zone_up_atlas_coords:
+		move_side = false
+	elif zone_coords != zone_all_atlas_coords:
+		printerr("Unexpected zone at:\nLevel " + str(current_level) + "\nPosition " + str(tilePos)
+		 + "\nAtlas Coordinates " + str(zone_coords))
+	
+	# Check if touching door
+	if blocks_coords == door_atlas_coords:
 		current_level += 1
 		get_parent().get_parent().load_level(current_level)
 		get_parent().queue_free()
@@ -34,11 +49,17 @@ func _physics_process(delta: float):
 		velocity.y += gravity * delta
 
 	# Handle jump
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if move_up and Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get input direction and handle the acceleration.
-	var direction = Input.get_axis("move_left", "move_right")
+	var direction
+	
+	if move_side:
+		direction = Input.get_axis("move_left", "move_right")
+	else:
+		direction = 0
+	
 	if direction:
 		velocity.x += direction * SPEED * delta
 	else:
