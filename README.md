@@ -1,5 +1,5 @@
 # Frictionless Game
-**By TwiceUponATime**
+**By Gabe Schrock**
 
 Credit to openmoji.org for the ice SVG (/assets/icon.svg):
 - URL: [https://www.svgrepo.com/svg/312370/ice](https://www.svgrepo.com/svg/312370/ice)
