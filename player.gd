@@ -90,3 +90,4 @@ func _on_danger_hitbox_body_entered(body: Node2D):
 func load_level():
 	main_node.load_level(current_level)
 	get_parent().queue_free()
+
