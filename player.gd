@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var tilemap: TileMap
 @export var current_level: int
+@export var button_script_holder: Node
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -35,6 +36,9 @@ func _physics_process(delta: float):
 		button_pressed_coords = tile_pos
 		var tile_data = tilemap.get_cell_tile_data(0, tile_pos)
 		var alt_tile = tiledata_to_alt_tile(tile_data)
+		
+		button_script_holder.button_pressed(tile_pos)
+		
 		tilemap.set_cell(0, tile_pos, 1, button_pressed_atlas_coords, alt_tile)
 	
 	
