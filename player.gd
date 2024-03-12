@@ -15,12 +15,28 @@ var door_atlas_coords = Vector2i(0, 2)
 var zone_all_atlas_coords = Vector2i(-1, -1)
 var zone_up_atlas_coords = Vector2i(0, 5)
 
+var button_atlas_coords = Vector2i(1, 1)
+var button_pressed_atlas_coords = Vector2i(2, 1)
+
+var button_pressed_coords = null
+
 func _physics_process(delta: float):
 	# Get tilemap coordinates
-	var tilePos = tilemap.local_to_map(position) / 4
+	var tile_pos = tilemap.local_to_map(position) / 4
 	
-	var blocks_coords = tilemap.get_cell_atlas_coords(0, tilePos)
-	var zone_coords = tilemap.get_cell_atlas_coords(3, tilePos)
+	var blocks_coords = tilemap.get_cell_atlas_coords(0, tile_pos)
+	var zone_coords = tilemap.get_cell_atlas_coords(3, tile_pos)
+	
+	if button_pressed_coords and tile_pos != button_pressed_coords:
+		var tile_data = tilemap.get_cell_tile_data(0, button_pressed_coords)
+		var alt_tile = tiledata_to_alt_tile(tile_data)
+		tilemap.set_cell(0, button_pressed_coords, 1, button_atlas_coords, alt_tile)
+	if blocks_coords == button_atlas_coords:
+		button_pressed_coords = tile_pos
+		var tile_data = tilemap.get_cell_tile_data(0, tile_pos)
+		var alt_tile = tiledata_to_alt_tile(tile_data)
+		tilemap.set_cell(0, tile_pos, 1, button_pressed_atlas_coords, alt_tile)
+	
 	
 	var move_side = true
 	var move_up = true
@@ -29,7 +45,7 @@ func _physics_process(delta: float):
 	if zone_coords == zone_up_atlas_coords:
 		move_side = false
 	elif zone_coords != zone_all_atlas_coords:
-		printerr("Unexpected zone at:\nLevel " + str(current_level) + "\nPosition " + str(tilePos)
+		printerr("Unexpected zone at:\nLevel " + str(current_level) + "\nPosition " + str(tile_pos)
 		 + "\nAtlas Coordinates " + str(zone_coords))
 	
 	# Check if touching door
@@ -86,6 +102,23 @@ func _on_danger_hitbox_body_entered(body: Node2D):
 	if body != self:
 		return
 	load_level()
+
+func tiledata_to_alt_tile(button_tile_data: TileData):
+	var flip_h    = button_tile_data.flip_h
+	var flip_v    = button_tile_data.flip_v
+	var transpose = button_tile_data.transpose
+	if flip_h != flip_v:
+		return -1
+	if flip_h:
+		if transpose:
+			return 3
+		else:
+			return 2
+	else:
+		if transpose:
+			return 1
+		else:
+			return 0
 
 func load_level():
 	main_node.load_level(current_level)
