@@ -1,4 +1,4 @@
 extends Node
 
-func button_pressed(tilemap_coords: Vector2i):
+func button_pressed(_tilemap_coords: Vector2i):
 	pass
