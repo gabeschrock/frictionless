@@ -86,10 +86,7 @@ func _physics_process(delta: float):
 	else:
 		velocity.x += move_toward(velocity.x, 0, SPEED) * delta
 	
-	if is_on_floor() and abs(velocity.x) > 10:
-		$WalkParticles.visible = true
-	else:
-		$WalkParticles.visible = false
+	$WalkParticles.emitting = is_on_floor() and abs(velocity.x) > 30
 	
 	if velocity.x:
 		$AnimatedSprite2D.play("walk")

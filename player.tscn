@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bryrwpbxmg7mf"]
+[gd_scene load_steps=9 format=3 uid="uid://bryrwpbxmg7mf"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_wk7f4"]
-[ext_resource type="Texture2D" uid="uid://d0pdwqfrujekl" path="res://assets/Player placeholder.png" id="2_33qst"]
 [ext_resource type="Texture2D" uid="uid://bpa8xrq0s140b" path="res://assets/Player-spritesheet.png" id="2_p3v7r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2ljk"]
@@ -31,14 +30,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_33qst")
-}],
-"loop": true,
-"name": &"placeholder",
 "speed": 5.0
 }, {
 "frames": [{
@@ -76,6 +67,7 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="WalkParticles" type="CPUParticles2D" parent="."]
 position = Vector2(0, 20)
+emitting = false
 direction = Vector2(0, -1)
 gravity = Vector2(0, 100)
 initial_velocity_min = 50.0
