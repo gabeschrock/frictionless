@@ -86,7 +86,7 @@ func _physics_process(delta: float):
 	else:
 		velocity.x += move_toward(velocity.x, 0, SPEED) * delta
 	
-	$WalkParticles.emitting = is_on_floor() and abs(velocity.x) > 30
+	$WalkParticles.emitting = is_on_floor() and abs(velocity.x) > 75
 	
 	if velocity.x:
 		$AnimatedSprite2D.play("walk")
