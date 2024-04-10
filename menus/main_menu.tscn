@@ -12,14 +12,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -219.5
-offset_top = -110.0
-offset_right = 219.5
+offset_left = -247.0
+offset_top = -169.0
+offset_right = 247.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_643i8")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 90
 text = "Frictionless"
 
 [node name="PlayButton" type="Button" parent="."]
@@ -28,13 +29,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.0
-offset_right = 99.0
-offset_bottom = 104.0
+offset_left = -97.5
+offset_top = -52.0
+offset_right = 97.5
+offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_643i8")
 text = "Play
 "
 
+[node name="HowToPlayButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = 61.0
+offset_right = 225.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_643i8")
+text = "How To Play"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
