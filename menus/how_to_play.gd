@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+var PAGE_COUNT = 2
+
+var page = 0
 @onready var main_node = get_parent()
 
 func _ready():
@@ -22,7 +25,17 @@ func _input(event: InputEvent):
 		self.queue_free()
 
 func _on_left_button_pressed():
-	print("left button pressed")
+	self.get_node("Page" + str(page)).visible = false
+	
+	page -= 1
+	page %= PAGE_COUNT
+	
+	self.get_node("Page" + str(page)).visible = true
 
 func _on_right_button_pressed():
-	print("right button pressed")
+	self.get_node("Page" + str(page)).visible = false
+	
+	page += 1
+	page %= PAGE_COUNT
+	
+	self.get_node("Page" + str(page)).visible = true
