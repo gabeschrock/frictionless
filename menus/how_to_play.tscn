@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhq4ebcn32ta4"]
+[gd_scene load_steps=12 format=3 uid="uid://bhq4ebcn32ta4"]
 
 [ext_resource type="Texture2D" uid="uid://qic2d1nhtcrm" path="res://assets/arrow-button/normal.png" id="1_lqt5p"]
 [ext_resource type="Script" path="res://menus/how_to_play.gd" id="1_m5p0u"]
@@ -7,6 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://cxqjx83baf1ql" path="res://assets/arrow-button/hover.png" id="3_kbqgq"]
 [ext_resource type="Texture2D" uid="uid://dsxbnydjk4bh1" path="res://assets/arrow-button/disabled.png" id="4_dbvgg"]
 [ext_resource type="Texture2D" uid="uid://qylk3hsdto72" path="res://assets/arrow-button/focused.png" id="6_r1l6u"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_br0fa"]
+device = -1
+physical_keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_rcqso"]
+events = [SubResource("InputEventKey_br0fa")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ph3go"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_ri03e"]
+events = [SubResource("InputEventKey_ph3go")]
 
 [node name="HowToPlay" type="CanvasLayer"]
 script = ExtResource("1_m5p0u")
@@ -29,19 +43,21 @@ texture_filter = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 65.0
+offset_left = 20.0
 offset_top = -40.0
-offset_right = 110.0
+offset_right = 65.0
 offset_bottom = 40.0
 grow_vertical = 2
-scale = Vector2(-1, 1)
 size_flags_horizontal = 8
+action_mode = 0
+shortcut = SubResource("Shortcut_rcqso")
 texture_normal = ExtResource("1_lqt5p")
 texture_pressed = ExtResource("2_hr6wo")
 texture_hover = ExtResource("3_kbqgq")
 texture_disabled = ExtResource("4_dbvgg")
 texture_focused = ExtResource("6_r1l6u")
 stretch_mode = 0
+flip_h = true
 
 [node name="RightButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -57,6 +73,7 @@ offset_bottom = 40.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 8
+shortcut = SubResource("Shortcut_ri03e")
 texture_normal = ExtResource("1_lqt5p")
 texture_pressed = ExtResource("2_hr6wo")
 texture_hover = ExtResource("3_kbqgq")
@@ -72,15 +89,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.5
-offset_top = -48.0
-offset_right = 110.5
-offset_bottom = 48.0
+offset_left = -597.5
+offset_top = -85.5
+offset_right = 597.5
+offset_bottom = 85.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_6bo4g")
-text = "Page 1"
+theme_override_font_sizes/font_size = 40
+text = "Welcome to Frictionless, a world that, of course, does not
+have friction. Use the arrow keys or WASD to move, and up,
+W, or space to jump. The only way to stop is by either
+hitting a wall or moving to the side at a very precise time."
+horizontal_alignment = 1
 
 [node name="Page1" type="CanvasLayer" parent="."]
 visible = false
@@ -91,15 +113,42 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.5
-offset_top = -48.0
-offset_right = 110.5
-offset_bottom = 48.0
+offset_left = -597.5
+offset_top = -56.5
+offset_right = 597.5
+offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_6bo4g")
-text = "Page 2"
+theme_override_font_sizes/font_size = 40
+text = "Use R to restart a level, and Escape to exit menus such as
+this one."
+horizontal_alignment = 1
+
+[node name="Page2" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="Page2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -597.5
+offset_top = -56.5
+offset_right = 597.5
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_6bo4g")
+theme_override_font_sizes/font_size = 40
+text = "Some levels will have red zones. Inside these areas,
+pressing left and right will not change the player's speed.
+Here, only jumping works, and the only way to stop is by
+hitting a wall."
+horizontal_alignment = 1
 
 [connection signal="pressed" from="LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]

@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var PAGE_COUNT = 2
+var PAGE_COUNT = 3
 
 var page = 0
 @onready var main_node = get_parent()
@@ -27,7 +27,7 @@ func _input(event: InputEvent):
 func _on_left_button_pressed():
 	self.get_node("Page" + str(page)).visible = false
 	
-	page -= 1
+	page += PAGE_COUNT - 1
 	page %= PAGE_COUNT
 	
 	self.get_node("Page" + str(page)).visible = true
@@ -35,7 +35,7 @@ func _on_left_button_pressed():
 func _on_right_button_pressed():
 	self.get_node("Page" + str(page)).visible = false
 	
-	page += 1
+	page += PAGE_COUNT + 1
 	page %= PAGE_COUNT
 	
 	self.get_node("Page" + str(page)).visible = true
