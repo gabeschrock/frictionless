@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5pmh1flamv7s"]
+[gd_scene load_steps=4 format=3 uid="uid://b5pmh1flamv7s"]
 
 [ext_resource type="Theme" uid="uid://qkfcmq8oqw2k" path="res://resources/menu_theme.tres" id="1_htxhk"]
 [ext_resource type="Script" path="res://menus/level_select.gd" id="1_tlu6c"]
+[ext_resource type="PackedScene" uid="uid://d1e2gxthcybiw" path="res://menus/back_button.tscn" id="2_icpb8"]
 
 [node name="LevelSelect" type="CanvasLayer"]
 script = ExtResource("1_tlu6c")
+
+[node name="BackButton" parent="." instance=ExtResource("2_icpb8")]
+exit_to = "main_menu"
 
 [node name="Level1" type="Button" parent="."]
 anchors_preset = -1

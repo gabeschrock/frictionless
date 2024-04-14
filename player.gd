@@ -7,7 +7,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-@onready var main_node = get_parent().get_parent()
+@onready var main_node = owner.get_parent()
 @onready var crate: CharacterBody2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -95,22 +95,6 @@ func _physics_process(delta: float):
 		$AnimatedSprite2D.play("idle")
 	
 	move_and_slide()
-
-func _input(event: InputEvent):
-	# Only handling keyboard events
-	if not event is InputEventKey:
-		return
-	
-	# Check to restart level
-	if event.is_action_pressed("restart"):
-		load_level()
-	
-	# Check to exit to level select
-	if event.is_action_pressed("exit"):
-		var instance = main_node.level_select.instantiate()
-		
-		main_node.add_child(instance)
-		get_parent().queue_free()
 
 func _on_danger_hitbox_body_entered(body: Node2D):
 	if body != self:

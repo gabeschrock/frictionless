@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1e2gxthcybiw"]
+
+[ext_resource type="Texture2D" uid="uid://qic2d1nhtcrm" path="res://assets/arrow-button/normal.png" id="1_c62rv"]
+[ext_resource type="Texture2D" uid="uid://cd5ieq57u4aeq" path="res://assets/arrow-button/pressed.png" id="2_jy4t3"]
+[ext_resource type="Texture2D" uid="uid://cxqjx83baf1ql" path="res://assets/arrow-button/hover.png" id="3_6w8hr"]
+[ext_resource type="Texture2D" uid="uid://dsxbnydjk4bh1" path="res://assets/arrow-button/disabled.png" id="4_th8cw"]
+[ext_resource type="Texture2D" uid="uid://qylk3hsdto72" path="res://assets/arrow-button/focused.png" id="5_sjbkj"]
+[ext_resource type="Script" path="res://menus/back_button.gd" id="6_pes46"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_n2572"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_j8kt6"]
+events = [SubResource("InputEventKey_n2572")]
+
+[node name="BackButton" type="TextureButton"]
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 32.0
+offset_bottom = 51.0
+size_flags_horizontal = 8
+tooltip_text = "Back"
+shortcut = SubResource("Shortcut_j8kt6")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("1_c62rv")
+texture_pressed = ExtResource("2_jy4t3")
+texture_hover = ExtResource("3_6w8hr")
+texture_disabled = ExtResource("4_th8cw")
+texture_focused = ExtResource("5_sjbkj")
+stretch_mode = 0
+flip_h = true
+script = ExtResource("6_pes46")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

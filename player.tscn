@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bryrwpbxmg7mf"]
+[gd_scene load_steps=10 format=3 uid="uid://bryrwpbxmg7mf"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_wk7f4"]
 [ext_resource type="Texture2D" uid="uid://bpa8xrq0s140b" path="res://assets/Player-spritesheet.png" id="2_p3v7r"]
+[ext_resource type="PackedScene" uid="uid://d1e2gxthcybiw" path="res://menus/back_button.tscn" id="3_1jho3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2ljk"]
 atlas = ExtResource("2_p3v7r")
@@ -64,6 +65,13 @@ shape = SubResource("CapsuleShape2D_j8v1w")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BackButton" parent="Camera2D" instance=ExtResource("3_1jho3")]
+offset_left = -632.0
+offset_top = -312.0
+offset_right = -608.0
+offset_bottom = -269.0
+metadata/_edit_use_anchors_ = true
 
 [node name="WalkParticles" type="CPUParticles2D" parent="."]
 position = Vector2(0, 20)
