@@ -16,3 +16,7 @@ func _on_how_to_play_button_pressed():
 	get_parent().add_child(instance)
 	
 	self.queue_free()
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()

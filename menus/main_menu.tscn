@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7b72b4uqmu41"]
+[gd_scene load_steps=5 format=3 uid="uid://b7b72b4uqmu41"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_1yd11"]
 [ext_resource type="Theme" uid="uid://qkfcmq8oqw2k" path="res://resources/menu_theme.tres" id="2_643i8"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_8yp0e"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_doyrw"]
+events = [SubResource("InputEventKey_8yp0e")]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_1yd11")
@@ -12,10 +19,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -247.0
-offset_top = -169.0
-offset_right = 247.0
-offset_bottom = -45.0
+offset_left = -248.0
+offset_top = -224.0
+offset_right = 246.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -29,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -97.5
-offset_top = -52.0
-offset_right = 97.5
-offset_bottom = 52.0
+offset_left = -96.0
+offset_top = -112.0
+offset_right = 99.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_643i8")
@@ -45,10 +52,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -225.0
-offset_top = 61.0
-offset_right = 225.0
-offset_bottom = 165.0
+offset_left = -224.0
+offset_top = 8.0
+offset_right = 226.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -56,5 +63,24 @@ size_flags_vertical = 4
 theme = ExtResource("2_643i8")
 text = "How To Play"
 
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 128.0
+offset_right = 91.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_643i8")
+shortcut = SubResource("Shortcut_doyrw")
+shortcut_in_tooltip = false
+text = "Quit
+"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
