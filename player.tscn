@@ -71,6 +71,7 @@ offset_left = -632.0
 offset_top = -312.0
 offset_right = -608.0
 offset_bottom = -269.0
+exit_to = "level_select"
 metadata/_edit_use_anchors_ = true
 
 [node name="WalkParticles" type="CPUParticles2D" parent="."]
