@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-@export var tilemap: TileMap
 @export var current_level: int
 @export var button_script_holder: Node
 
@@ -9,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 
 @onready var main_node = owner.get_parent()
 @onready var crate: CharacterBody2D
+@onready var tilemap = get_node("../Level")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -23,6 +23,10 @@ var button_pressed_atlas_coords = Vector2i(2, 1)
 var button_pressed_coords = null
 
 func _physics_process(delta: float):
+	# Restart level if in void
+	if position.y > 1000:
+		load_level()
+	
 	# Get tilemap coordinates
 	var tile_pos = tilemap.local_to_map(position) / 4
 	
@@ -121,4 +125,3 @@ func tiledata_to_alt_tile(button_tile_data: TileData):
 func load_level():
 	main_node.load_level(current_level)
 	get_parent().queue_free()
-

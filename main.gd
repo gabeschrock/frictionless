@@ -18,4 +18,4 @@ func load_level(level: int):
 	var level_scene = load("res://levels/level_" + str(level) + ".tscn")
 	var instance = level_scene.instantiate();
 	
-	add_child(instance)
+	call_deferred("add_child", instance)
