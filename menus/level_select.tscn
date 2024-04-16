@@ -85,7 +85,6 @@ offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
-disabled = true
 text = "5"
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
