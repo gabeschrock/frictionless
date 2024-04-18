@@ -16,9 +16,9 @@ anchor_left = 0.075
 anchor_top = 0.15
 anchor_right = 0.075
 anchor_bottom = 0.15
-offset_left = -56.0
+offset_left = -24.0
 offset_top = -56.0
-offset_right = 56.0
+offset_right = 88.0
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -33,9 +33,9 @@ anchor_left = 0.174
 anchor_top = 0.15
 anchor_right = 0.174
 anchor_bottom = 0.15
-offset_left = -55.72
+offset_left = -23.72
 offset_top = -56.0
-offset_right = 56.28
+offset_right = 88.28
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -48,9 +48,9 @@ anchor_left = 0.274
 anchor_top = 0.15
 anchor_right = 0.274
 anchor_bottom = 0.15
-offset_left = -55.72
+offset_left = -23.72
 offset_top = -56.0
-offset_right = 56.28
+offset_right = 88.28
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -63,9 +63,9 @@ anchor_left = 0.374
 anchor_top = 0.15
 anchor_right = 0.374
 anchor_bottom = 0.15
-offset_left = -55.72
+offset_left = -23.72
 offset_top = -56.0
-offset_right = 56.28
+offset_right = 88.28
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -78,17 +78,240 @@ anchor_left = 0.374
 anchor_top = 0.15
 anchor_right = 0.374
 anchor_bottom = 0.15
-offset_left = 73.28
+offset_left = 105.28
 offset_top = -56.0
-offset_right = 185.28
+offset_right = 217.28
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "5"
 
+[node name="Level6" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 233.28
+offset_top = -56.0
+offset_right = 345.28
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "6"
+
+[node name="Level7" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 361.28
+offset_top = -56.0
+offset_right = 473.28
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "7"
+
+[node name="Level8" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 489.28
+offset_top = -56.0
+offset_right = 601.28
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "8"
+
+[node name="Level9" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 617.28
+offset_top = -56.0
+offset_right = 729.28
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "9"
+
+[node name="Level10" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = 0.15
+anchor_right = 0.075
+anchor_bottom = 0.15
+offset_left = -24.0
+offset_top = 72.0
+offset_right = 88.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "10"
+
+[node name="Level11" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.174
+anchor_top = 0.15
+anchor_right = 0.174
+anchor_bottom = 0.15
+offset_left = -23.72
+offset_top = 72.0
+offset_right = 88.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "11"
+
+[node name="Level12" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.274
+anchor_top = 0.15
+anchor_right = 0.274
+anchor_bottom = 0.15
+offset_left = -23.72
+offset_top = 72.0
+offset_right = 88.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "12"
+
+[node name="Level13" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = -23.72
+offset_top = 72.0
+offset_right = 88.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "13"
+
+[node name="Level14" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 105.28
+offset_top = 72.0
+offset_right = 217.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "14"
+
+[node name="Level15" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 233.28
+offset_top = 72.0
+offset_right = 345.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "15"
+
+[node name="Level16" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 361.28
+offset_top = 72.0
+offset_right = 473.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "16"
+
+[node name="Level17" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 489.28
+offset_top = 72.0
+offset_right = 601.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "17"
+
+[node name="Level18" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.374
+anchor_top = 0.15
+anchor_right = 0.374
+anchor_bottom = 0.15
+offset_left = 617.28
+offset_top = 72.0
+offset_right = 729.28
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "18"
+
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level6" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level7" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level8" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level9" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level10" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level11" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level12" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level13" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Level14" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level15" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level16" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level17" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="Level18" to="." method="_on_level_5_pressed"]

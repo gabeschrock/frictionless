@@ -125,3 +125,4 @@ func tiledata_to_alt_tile(button_tile_data: TileData):
 func load_level():
 	main_node.load_level(current_level)
 	get_parent().queue_free()
+
