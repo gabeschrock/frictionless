@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bhq4ebcn32ta4"]
+[gd_scene load_steps=18 format=3 uid="uid://bhq4ebcn32ta4"]
 
 [ext_resource type="Texture2D" uid="uid://qic2d1nhtcrm" path="res://assets/arrow-button/normal.png" id="1_lqt5p"]
 [ext_resource type="Script" path="res://menus/how_to_play.gd" id="1_m5p0u"]
@@ -16,15 +16,25 @@
 device = -1
 physical_keycode = 4194319
 
+[sub_resource type="InputEventKey" id="InputEventKey_n8mrr"]
+device = -1
+keycode = 65
+unicode = 97
+
 [sub_resource type="Shortcut" id="Shortcut_rcqso"]
-events = [SubResource("InputEventKey_br0fa")]
+events = [SubResource("InputEventKey_br0fa"), SubResource("InputEventKey_n8mrr")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_ph3go"]
 device = -1
 keycode = 4194321
 
+[sub_resource type="InputEventKey" id="InputEventKey_4vfj1"]
+device = -1
+keycode = 68
+unicode = 100
+
 [sub_resource type="Shortcut" id="Shortcut_ri03e"]
-events = [SubResource("InputEventKey_ph3go")]
+events = [SubResource("InputEventKey_ph3go"), SubResource("InputEventKey_4vfj1")]
 
 [node name="HowToPlay" type="CanvasLayer"]
 script = ExtResource("1_m5p0u")

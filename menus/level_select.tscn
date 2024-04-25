@@ -100,7 +100,6 @@ offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
-disabled = true
 text = "6"
 
 [node name="Level7" type="Button" parent="."]

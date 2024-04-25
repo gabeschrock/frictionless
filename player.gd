@@ -7,7 +7,6 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var main_node = owner.get_parent()
-@onready var crate: CharacterBody2D
 @onready var tilemap = get_node("../Level")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -80,13 +79,6 @@ func _physics_process(delta: float):
 	
 	if direction:
 		velocity.x += direction * SPEED * delta
-		if crate:
-			crate.velocity.x = velocity.x
-			crate.move_and_slide()
-			if crate.velocity.x != velocity.x:
-				velocity.x = 0
-		#if -10 <= velocity.x and velocity.x <= 10:
-			#velocity.x = 11 * sign(direction)
 	else:
 		velocity.x += move_toward(velocity.x, 0, SPEED) * delta
 	
