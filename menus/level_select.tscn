@@ -12,154 +12,120 @@ exit_to = "main_menu"
 
 [node name="Level1" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.075
-anchor_top = 0.15
-anchor_right = 0.075
-anchor_bottom = 0.15
-offset_left = -24.0
-offset_top = -56.0
-offset_right = 88.0
-offset_bottom = 56.0
+anchor_left = 0.00625
+anchor_top = 0.1
+anchor_right = 0.09375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_htxhk")
 text = "1"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level2" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.174
-anchor_top = 0.15
-anchor_right = 0.174
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = -56.0
-offset_right = 88.28
-offset_bottom = 56.0
+anchor_left = 0.105469
+anchor_top = 0.1
+anchor_right = 0.192969
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level3" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.274
-anchor_top = 0.15
-anchor_right = 0.274
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = -56.0
-offset_right = 88.28
-offset_bottom = 56.0
+anchor_left = 0.205469
+anchor_top = 0.1
+anchor_right = 0.292969
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "3"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level4" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = -56.0
-offset_right = 88.28
-offset_bottom = 56.0
+anchor_left = 0.305469
+anchor_top = 0.1
+anchor_right = 0.392969
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "4"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level5" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 105.28
-offset_top = -56.0
-offset_right = 217.28
-offset_bottom = 56.0
+anchor_left = 0.40625
+anchor_top = 0.1
+anchor_right = 0.49375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "5"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level6" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 233.28
-offset_top = -56.0
-offset_right = 345.28
-offset_bottom = 56.0
+anchor_left = 0.50625
+anchor_top = 0.1
+anchor_right = 0.59375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 text = "6"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level7" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 361.28
-offset_top = -56.0
-offset_right = 473.28
-offset_bottom = 56.0
+anchor_left = 0.60625
+anchor_top = 0.1
+anchor_right = 0.69375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
-disabled = true
 text = "7"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level8" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 489.28
-offset_top = -56.0
-offset_right = 601.28
-offset_bottom = 56.0
+anchor_left = 0.70625
+anchor_top = 0.1
+anchor_right = 0.79375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
-disabled = true
 text = "8"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level9" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 617.28
-offset_top = -56.0
-offset_right = 729.28
-offset_bottom = 56.0
+anchor_left = 0.80625
+anchor_top = 0.1
+anchor_right = 0.89375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
-disabled = true
 text = "9"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level10" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.075
-anchor_top = 0.15
-anchor_right = 0.075
-anchor_bottom = 0.15
-offset_left = -24.0
-offset_top = 72.0
-offset_right = 88.0
-offset_bottom = 184.0
+anchor_left = 0.90625
+anchor_top = 0.1
+anchor_right = 0.99375
+anchor_bottom = 0.275
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -167,150 +133,279 @@ size_flags_vertical = 4
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "10"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level11" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.174
-anchor_top = 0.15
-anchor_right = 0.174
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = 72.0
-offset_right = 88.28
-offset_bottom = 184.0
+anchor_left = 0.00625
+anchor_top = 0.3
+anchor_right = 0.09375
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "11"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level12" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.274
-anchor_top = 0.15
-anchor_right = 0.274
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = 72.0
-offset_right = 88.28
-offset_bottom = 184.0
+anchor_left = 0.10625
+anchor_top = 0.3
+anchor_right = 0.19375
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "12"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level13" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = -23.72
-offset_top = 72.0
-offset_right = 88.28
-offset_bottom = 184.0
+anchor_left = 0.20625
+anchor_top = 0.3
+anchor_right = 0.29375
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "13"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level14" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 105.28
-offset_top = 72.0
-offset_right = 217.28
-offset_bottom = 184.0
+anchor_left = 0.307031
+anchor_top = 0.3
+anchor_right = 0.394531
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "14"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level15" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 233.28
-offset_top = 72.0
-offset_right = 345.28
-offset_bottom = 184.0
+anchor_left = 0.407031
+anchor_top = 0.3
+anchor_right = 0.494531
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "15"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level16" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 361.28
-offset_top = 72.0
-offset_right = 473.28
-offset_bottom = 184.0
+anchor_left = 0.507031
+anchor_top = 0.3
+anchor_right = 0.594531
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "16"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level17" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 489.28
-offset_top = 72.0
-offset_right = 601.28
-offset_bottom = 184.0
+anchor_left = 0.607031
+anchor_top = 0.3
+anchor_right = 0.694531
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "17"
+metadata/_edit_use_anchors_ = true
 
 [node name="Level18" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.374
-anchor_top = 0.15
-anchor_right = 0.374
-anchor_bottom = 0.15
-offset_left = 617.28
-offset_top = 72.0
-offset_right = 729.28
-offset_bottom = 184.0
+anchor_left = 0.707031
+anchor_top = 0.3
+anchor_right = 0.794531
+anchor_bottom = 0.475
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_htxhk")
 disabled = true
 text = "18"
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="Level4" to="." method="_on_level_4_pressed"]
-[connection signal="pressed" from="Level5" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level6" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level7" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level8" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level9" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level10" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Level11" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="Level12" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="Level13" to="." method="_on_level_4_pressed"]
-[connection signal="pressed" from="Level14" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level15" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level16" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level17" to="." method="_on_level_5_pressed"]
-[connection signal="pressed" from="Level18" to="." method="_on_level_5_pressed"]
+[node name="Level19" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.80625
+anchor_top = 0.3
+anchor_right = 0.89375
+anchor_bottom = 0.475
+offset_top = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "19
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level20" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.90625
+anchor_top = 0.3
+anchor_right = 0.99375
+anchor_bottom = 0.475
+offset_top = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "20
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level21" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.00625
+anchor_top = 0.5
+anchor_right = 0.09375
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "21"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level22" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.10625
+anchor_top = 0.5
+anchor_right = 0.19375
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "22"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level23" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.20625
+anchor_top = 0.5
+anchor_right = 0.29375
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "23"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level24" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.307031
+anchor_top = 0.5
+anchor_right = 0.394531
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "24"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level25" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.407031
+anchor_top = 0.5
+anchor_right = 0.494531
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "25"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level26" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.507031
+anchor_top = 0.5
+anchor_right = 0.594531
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "26"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level27" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.607031
+anchor_top = 0.5
+anchor_right = 0.694531
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "27"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level28" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.707031
+anchor_top = 0.5
+anchor_right = 0.794531
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "28"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level29" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.80625
+anchor_top = 0.5
+anchor_right = 0.89375
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "29"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level30" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.90625
+anchor_top = 0.5
+anchor_right = 0.99375
+anchor_bottom = 0.675
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_htxhk")
+disabled = true
+text = "30"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Level1" to="." method="open_level" binds= [1]]
+[connection signal="pressed" from="Level2" to="." method="open_level" binds= [2]]
+[connection signal="pressed" from="Level3" to="." method="open_level" binds= [3]]
+[connection signal="pressed" from="Level4" to="." method="open_level" binds= [4]]
+[connection signal="pressed" from="Level5" to="." method="open_level" binds= [5]]
+[connection signal="pressed" from="Level6" to="." method="open_level" binds= [6]]
+[connection signal="pressed" from="Level7" to="." method="open_level" binds= [7]]
+[connection signal="pressed" from="Level8" to="." method="open_level" binds= [8]]
+[connection signal="pressed" from="Level9" to="." method="open_level" binds= [9]]
+[connection signal="pressed" from="Level10" to="." method="open_level" binds= [10]]

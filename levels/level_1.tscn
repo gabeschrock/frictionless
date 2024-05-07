@@ -5,6 +5,7 @@
 [node name="Level1" instance=ExtResource("1_0fexq")]
 
 [node name="Player" parent="." index="0"]
+position = Vector2(40, 488)
 current_level = 1
 
 [node name="Level" parent="." index="1"]
